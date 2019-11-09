@@ -53,10 +53,18 @@
 	<build>
 		<plugins>
 			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
+			<!--<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.3</version>
@@ -71,7 +79,6 @@
 					</execution>
 				</executions>
 				<configuration>
-					<!--<repository>66996699/${project.artifactId}</repository>-->
 					<repository>docker.io/66996699/${project.artifactId}</repository>
 					<tag>${project.version}</tag>
 					<buildArgs>
@@ -79,7 +86,7 @@
 					</buildArgs>
 				</configuration>
 
-			</plugin>
+			</plugin>-->
 
 		</plugins>
 		<finalName>spring-boot-docker-maven</finalName>
