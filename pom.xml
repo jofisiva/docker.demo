@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.technxt</groupId>
-	<artifactId>docker.demo.maven-1</artifactId>
+	<artifactId>docker.demo.maven</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring boot docker demo maven</name>
 	<description>Demo project for Spring Boot Docker Maven</description>
