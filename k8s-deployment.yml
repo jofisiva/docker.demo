@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  spring-boot-docker-maven
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app:  spring-boot-docker-maven
+  template:
+    metadata:
+      labels:
+        app:  spring-boot-docker-maven
+    spec:
+      containers:
+      - name:  spring-boot-docker-maven
+        image: spring-boot-docker-maven
+        ports:
+        - containerPort: 8080
+        env:
+           - name: spring.profiles.active
+             value: k8s
+
+
+

@@ -21,4 +21,7 @@ public class SampleRepository   {
         return (List<Sample>) springDataSampleJpaRepository.findAll();
     }
 
+    public void save(Sample sampleDto) {
+        springDataSampleJpaRepository.save(sampleDto);
+    }
 }
